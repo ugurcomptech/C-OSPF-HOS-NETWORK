@@ -3,6 +3,18 @@ Bu ağ tasarımında, MultiLayer Switch (Çok Katmanlı Anahtar) kullanılmış 
 
 Bu network tasarımımızda 4 Multilayer Switch, 3 Router, 5 Server, 6 tane de Bilgisayar bulunuyor.
 
+## Router ML Arası Bağlantı
+
+MultiLayer ile Router arasında bağlantı yapmak istiyorsanız VLAN oluşturmanıza gerek yok aşağıda ki kodu MultiLayer Switche yazarsanız normal IP adresi yazabilirsiniz.
+
+```
+Switch(config)#interface fastEthernet 0/2 // yapılandırmak istediğiniz port
+Switch(config-if)#no switchport
+Switch(config-if)#ip address 1.1.1.1 255.0.0.0 // IP adresi
+```
+
+
+
 ## OSPF Routing Nasıl Yapılır?
 
 Bu kaynak, OSPF'nin temel konseptlerini ve Cisco cihazlarında nasıl yapılandırılacağını ayrıntılı bir şekilde açıklar. Ayrıca, farklı senaryolara uyarlanabilen adım adım yönergeler sunar.
